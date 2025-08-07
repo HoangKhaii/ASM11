@@ -64,7 +64,10 @@ $on_sale_result = mysqli_query($connect, $on_sale_sql);
                 <?php if ($isLoggedIn): ?>
                     <span class="text-success fw-bold me-2">
                         <i class="bi bi-person-circle"></i>
-                        <?php echo htmlspecialchars($currentUser['firstname'] . ' ' . $currentUser['lastname']); ?>
+                        <a href="profile.php" class="text-success fw-bold text-decoration-none">
+                            <?php echo htmlspecialchars($currentUser['firstname'] . ' ' . $currentUser['lastname']); ?>
+                            <i class="bi bi-person-lines-fill ms-1"></i>
+                        </a>
                     </span>
                     <?php if ($currentUser['role'] === 'admin'): ?>
                         <a href="admin/index.php" class="text-success fw-bold me-2">
@@ -111,7 +114,7 @@ $on_sale_result = mysqli_query($connect, $on_sale_sql);
         <div class="container-lg">
             <div class="navbar-nav w-100 justify-content-between">
                 <a class="nav-link text-white fw-bold text-uppercase" href="#"><i class="bi bi-house-door"></i>Home</a>
-                <a class="nav-link text-white fw-bold text-uppercase" href="#"><i class="bi bi-box-seam"></i>
+                <a class="nav-link text-white fw-bold text-uppercase" href="products.php"><i class="bi bi-box-seam"></i>
                     Product</a>
                 <a class="nav-link text-white fw-bold text-uppercase" href="#"><i class="bi bi-info-circle"></i>
                     Introduce</a>
@@ -119,7 +122,7 @@ $on_sale_result = mysqli_query($connect, $on_sale_sql);
                 <a class="nav-link text-white fw-bold text-uppercase" href="#"><i class="bi bi-heart-pulse">Health
                         category</i></a>
                 <a class="nav-link text-white fw-bold text-uppercase" href="#"><i class="bi bi-newspaper"></i>News</a>
-                <a class="nav-link text-white fw-bold text-uppercase" href="#"><i class="bi bi-envelope"></i>
+                <a class="nav-link text-white fw-bold text-uppercase" href="contact.php"><i class="bi bi-envelope"></i>
                     Contacts</a>
             </div>
         </div>
@@ -132,11 +135,31 @@ $on_sale_result = mysqli_query($connect, $on_sale_sql);
                 <div class="bg-white rounded shadow-sm p-3 mb-4">
                     <h6 class="sidebar-title"><i class="bi bi-list-ul me-2"></i>PRODUCT LIST</h6>
                     <ul class="list-group mb-3">
-                        <li class="list-group-item"><i class="bi bi-tree me-2"></i>Seedling</li>
-                        <li class="list-group-item"><i class="bi bi-droplet-half me-2"></i>Seeds</li>
-                        <li class="list-group-item"><i class="bi bi-emoji-smile me-2"></i>Clean fruit</li>
-                        <li class="list-group-item"><i class="bi bi-flower1 me-2"></i>Clean vegetables</li>
-                        <li class="list-group-item"><i class="bi bi-question-circle me-2"></i>Advise</li>
+                        <li class="list-group-item">
+                            <a href="products.php?category=seedling" class="text-decoration-none d-flex align-items-center">
+                                <i class="bi bi-tree me-2"></i>Seedling
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="products.php?category=seeds" class="text-decoration-none d-flex align-items-center">
+                                <i class="bi bi-droplet-half me-2"></i>Seeds
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="products.php?category=clean_fruit" class="text-decoration-none d-flex align-items-center">
+                                <i class="bi bi-emoji-smile me-2"></i>Clean fruit
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="products.php?category=clean_vegetables" class="text-decoration-none d-flex align-items-center">
+                                <i class="bi bi-flower1 me-2"></i>Clean vegetables
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="products.php?category=advise" class="text-decoration-none d-flex align-items-center">
+                                <i class="bi bi-question-circle me-2"></i>Advise
+                            </a>
+                        </li>
                     </ul>
                     <h6 class="sidebar-title"><i class="bi bi-lightbulb me-2"></i>ADVISE</h6>
                     <ul class="list-group mb-3">
@@ -176,13 +199,13 @@ $on_sale_result = mysqli_query($connect, $on_sale_sql);
                     <div class="banner-caption text-center">
                         <h2>CLEAN VEGETABLES, CLEAN FRUITS</h2>
                         <p>Providing clean vegetables and safe fruits</p>
-                        <a href="#" class="btn btn-success px-4"><i class="bi bi-telephone"></i>Contact now!</a>
+                        <a href="contact.php" class="btn btn-success px-4"><i class="bi bi-telephone"></i>Contact now!</a>
                     </div>
                 </div>
                 <!-- Section: Sản phẩm -->
                 <div class="d-flex justify-content-between align-items-center mb-2">
                     <div class="section-title mb-0">PRODUCT</div>
-                    <a href="#" class="btn btn-outline-success btn-sm">See more<i class="bi bi-arrow-right"></i></a>
+                    <a href="products.php" class="btn btn-outline-success btn-sm">See more<i class="bi bi-arrow-right"></i></a>
                 </div>
                 <div class="row row-cols-1 row-cols-md-3 g-4">
 <?php if ($product_result && mysqli_num_rows($product_result) > 0): ?>
