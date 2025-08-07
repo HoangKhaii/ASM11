@@ -1,0 +1,328 @@
+body {
+    background: #e8f5e9;
+    font-family: 'Segoe UI', 'Roboto', 'Times New Roman', serif;
+    color: #205723;
+}
+
+.topbar {
+    font-size: 0.95em;
+    background: #e8f5e9;
+    border-bottom: 1px solid #a5d6a7;
+}
+
+.logo {
+    height: 54px;
+    object-fit: contain;
+}
+
+.search-bar input[type="search"] {
+    width: 220px;
+    height: 36px;
+    font-size: 1em;
+    margin-right: 5px;
+    padding-left: 10px;
+    border-radius: 20px;
+}
+
+.search-bar .btn {
+    border-radius: 20px;
+    min-width: 100px;
+}
+
+.mainmenu .nav-link {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 1.08em;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 0 18px;
+    line-height: 54px;
+    transition: color 0.2s, background 0.2s;
+    position: relative;
+}
+
+.mainmenu .nav-link.active,
+.mainmenu .nav-link:hover {
+    color: #fff !important;
+    background: #388e3c;
+    border-radius: 4px 4px 0 0;
+}
+
+.mainmenu .nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #66bb6a;
+    transition: width .2s;
+    position: absolute;
+    left: 0;
+    bottom: 8px;
+}
+
+.mainmenu .nav-link:hover::after,
+.mainmenu .nav-link.active::after {
+    width: 100%;
+}
+
+.section-title {
+    background: #388e3c;
+    color: #fff;
+    font-size: 1.15em;
+    font-weight: 700;
+    padding: 8px 18px;
+    border-radius: 4px 4px 0 0;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+.sidebar-title {
+    font-size: 1.08em;
+    font-weight: 700;
+    color: #388e3c;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.list-group-item {
+    font-size: 1em;
+    font-family: 'Segoe UI', 'Comic Sans MS', cursive, sans-serif;
+    background: #e8f5e9;
+    color: #205723;
+    border: none;
+    margin-bottom: 4px;
+    transition: background 0.2s, color 0.2s;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.list-group-item:hover {
+    background: #c8e6c9;
+    color: #388e3c;
+}
+
+.item {
+    border: 1.5px solid #a5d6a7;
+    border-radius: 16px;
+    background: #f1f8e9;
+    transition: box-shadow 0.2s, border 0.2s, transform 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.item:hover {
+    box-shadow: 0 8px 32px rgba(56,142,60,0.08);
+    border: 1.5px solid #388e3c;
+    z-index: 2;
+    transform: translateY(-4px) scale(1.02);
+}
+
+.item .card-title {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+.item .card-text.fw-bold {
+    color: #388e3c;
+    font-size: 1.08em;
+    margin-bottom: 10px;
+}
+
+.item .btn-link {
+    color: #388e3c;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1em;
+    border-radius: 20px;
+}
+
+.item .btn-link:hover {
+    text-decoration: underline;
+    color: #66bb6a;
+}
+
+.item .btn-success {
+    background: #388e3c;
+    border: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-radius: 20px;
+}
+
+.item .btn-success:hover {
+    background: #66bb6a;
+}
+
+.item .card-img-top {
+    border-radius: 1rem 1rem 0 0;
+    border: 1px solid #a5d6a7;
+    height: 180px;
+    object-fit: cover;
+    background: #e8f5e9;
+}
+
+.badge.bg-success {
+    font-size: 0.95em;
+    padding: 0.5em 0.8em;
+    border-radius: 12px;
+    background: #388e3c;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    color: #fff;
+}
+
+footer {
+    background: #e8f5e9;
+    font-size: 1.1em;
+    color: #205723;
+    font-family: 'Times New Roman', serif;
+    border-top: 1px solid #a5d6a7;
+}
+
+.pagination .page-link {
+    color: #388e3c;
+    border: none;
+    font-weight: 600;
+    border-radius: 8px !important;
+    margin: 0 2px;
+}
+
+.pagination .active .page-link {
+    background: #388e3c;
+    color: #fff;
+    border-radius: 8px !important;
+}
+
+.banner {
+    position: relative;
+    background: #c8e6c9;
+}
+
+.banner-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-shadow: 1px 1px 8px #000a;
+    z-index: 2;
+}
+
+.banner-caption h2 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.banner-caption p {
+    font-size: 1.15em;
+    margin-bottom: 12px;
+}
+
+.banner img {
+    filter: brightness(0.7);
+    transition: filter 0.3s;
+}
+
+.banner:hover img {
+    filter: brightness(0.5) blur(1px);
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    display: none;
+    z-index: 999;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    font-size: 1.3em;
+    padding: 10px 14px;
+    background: #388e3c;
+    color: white;
+    border-radius: 8px;
+}
+
+#backToTop:hover {
+    background: #66bb6a !important;
+}
+
+/* Hiệu ứng hover cho logo */
+.logo {
+    transition: transform 0.2s;
+}
+
+.logo:hover {
+    transform: rotate(-8deg) scale(1.08);
+}
+
+/* Hiệu ứng cho nút */
+.btn,
+.btn-success,
+.btn-outline-success {
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.btn-success:hover,
+.btn-outline-success:hover {
+    box-shadow: 0 4px 16px rgba(139, 94, 60, 0.2);
+    transform: translateY(-2px) scale(1.04);
+}
+
+/* -------- RESPONSIVE -------- */
+@media (max-width: 991.98px) {
+    .col-lg-3, .col-lg-9 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .sidebar-title,
+    .section-title {
+        text-align: center;
+    }
+    .banner-caption h2 {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 500px) {
+    .logo {
+        font-size: 1rem;
+    }
+    .section-title {
+        font-size: 1em;
+        padding: 6px 10px;
+    }
+    .banner-caption h2 {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .mainmenu .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .mainmenu .nav-link {
+        padding: 10px 18px;
+        line-height: 1.5;
+    }
+    .row-cols-md-3>.col,
+    .row-cols-md-3>[class^="col-"] {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .banner img {
+        max-height: 140px;
+    }
+    .banner-caption {
+        top: 60%;
+    }
+    .item .card-img-top {
+        height: 110px;
+    }
+    .banner img {
+        max-height: 120px;
+    }
+    .sidebar-title,
+    .section-title {
+        font-size: 1em;
+    }
+}

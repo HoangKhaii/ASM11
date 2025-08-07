@@ -1,0 +1,201 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #205723;
+  min-height: 100vh;
+  position: relative;
+  background: #e8f5e9;
+}
+
+.background {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: url('https://www.transparenttextures.com/patterns/wood-pattern.png') center/cover repeat;
+  filter: brightness(0.8) blur(1px);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 60px 0 60px;
+  background: transparent;
+}
+
+.brand {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #388e3c;
+}
+
+.menu a {
+  color: #388e3c;
+  text-decoration: none;
+  margin: 0 18px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.menu a:hover,
+.menu a.active {
+  color: #66bb6a;
+}
+
+.button-group {
+  display: flex;
+  gap: 12px;
+}
+
+.button {
+  padding: 8px 28px;
+  border-radius: 22px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  background: transparent;
+  color: #388e3c;
+  transition: background 0.2s, color 0.2s;
+  text-decoration: none;
+  outline: none;
+}
+
+.button.outline {
+  border: 1.5px solid #388e3c;
+  background: rgba(56, 142, 60, 0.08);
+}
+
+.button.solid {
+  background: #388e3c;
+  color: #fff;
+}
+
+.button.solid:hover {
+  background: #66bb6a;
+}
+
+.button.outline:hover {
+  background: #388e3c;
+  color: #fff;
+}
+
+.form-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.form-login,
+.form-register {
+  background: rgba(56, 142, 60, 0.65);
+  padding: 38px 36px 30px 36px;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  width: 400px;
+  max-width: 95vw;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  color: #fff;
+}
+
+.form-login h2,
+.form-register h2 {
+  text-align: center;
+  margin-bottom: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.link-signup a,
+.link-login a,
+.form-options a {
+  color: #a5d6a7;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  background: rgba(255,255,255,0.13);
+  border-radius: 8px;
+  padding: 0 12px;
+  margin-bottom: 10px;
+  flex: 1;
+}
+
+.input i {
+  color: #a5d6a7;
+  font-size: 1.1rem;
+  margin-right: 8px;
+}
+
+.input input {
+  border: none;
+  background: transparent;
+  outline: none;
+  color: #fff;
+  padding: 12px 0;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.input input::placeholder {
+  color: #eee;
+}
+
+.button.submit {
+  width: 100%;
+  padding: 12px 0;
+  border-radius: 8px;
+  border: none;
+  background: #43a047;
+  color: #fff;
+  font-size: 1.08rem;
+  font-weight: 600;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.button.submit:hover {
+  background: #388e3c;
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.97rem;
+}
+
+.form-options label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Responsive chỉnh giữ nguyên */
+@media (max-width: 700px) {
+  .header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 24px 10px 0 10px;
+  }
+  .form-area {
+    min-height: 70vh;
+  }
+  .form-login,
+  .form-register {
+    padding: 28px 10px 20px 10px;
+    width: 98vw;
+  }
+  .row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
